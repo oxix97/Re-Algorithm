@@ -1,4 +1,4 @@
-package org.example.baekjoon.graph.dijkstra;
+package org.example.baekjoon.graph;
 
 import java.io.*;
 import java.util.*;
