@@ -1,30 +1,23 @@
 import sys
 
 def main():
-    T = int(input())
+    input = sys.stdin.readline
+    T = int(input().strip())
     for _ in range(T):
-        N = int(input())
+        N = int(input().strip())
         arr = []
         for _ in range(N):
-            a,b = map(int,input().split())
-            arr.append((a,b))
+            a, b = map(int, input().strip().split())
+            arr.append((a, b))
 
         arr.sort()
-
-        answer = 1
-        min = arr[0][1]
-        for i in range(1,N):
-            if arr[i][1] < min:
-                answer+=1
-                min = arr[i][1]
-
+        answer = 0
+        rank = 100_001
+        for i in range(N):
+            if arr[i][1] < rank:
+                answer += 1
+                rank = arr[i][1]
         print(answer)
-
-
-
-
-
-
 
 if __name__ == '__main__':
     main()
