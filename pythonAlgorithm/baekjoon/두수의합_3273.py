@@ -1,6 +1,5 @@
 import sys
 
-
 def main():
     input = sys.stdin.readline
     n = int(input())
@@ -11,13 +10,18 @@ def main():
     right = n - 1
     arr.sort()
     answer = 0
-    while left != right:
-        sum = arr[left] + arr[right]
-        if sum < x:
+
+    while left < right:
+        current_sum = arr[left] + arr[right]
+        if current_sum == x:
+            answer += 1
+            left += 1
+            right -= 1
+        elif current_sum < x:
             left += 1
         else:
             right -= 1
-        if sum == x: answer += 1
+
     print(answer)
 
 if __name__ == '__main__':
