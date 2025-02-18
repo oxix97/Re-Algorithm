@@ -8,7 +8,6 @@ def main():
     M = int(input())
     graph = defaultdict(list)
     indegree = [0] * (N + 1)
-
     needs = [[0] * (N + 1) for _ in range(N + 1)]
     for _ in range(M):
         x, y, k = map(int, input().split())
@@ -19,7 +18,6 @@ def main():
         if indegree[i] == 0:
             q.append(i)
             needs[i][i] = 1
-
     while q:
         now = q.popleft()
 
