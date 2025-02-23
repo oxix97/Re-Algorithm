@@ -1,20 +1,12 @@
-import math
+import sys
 
 
 def main():
-    N = int(input())
-    dp = [4] * (N + 1)
-
-    for i in range(1, N + 1):
-        if math.sqrt(i).is_integer():
-            dp[i] = 1
-            continue
-        for j in range(1, N):
-            if j * j > i:
-                break
-            dp[i] = min(dp[i], dp[i - j * j] + 1)
-
-    print(dp[N])
+    n = int(sys.stdin.readline())
+    DP = [0, 1]
+    for i in range(2, n + 1):
+        DP.append(min([DP[i - (j ** 2)] + 1 for j in range(1, int(i ** 0.5) + 1)]))
+    print(DP[n])
 
 
 if __name__ == '__main__':
