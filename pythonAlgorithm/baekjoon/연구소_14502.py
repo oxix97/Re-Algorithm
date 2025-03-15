@@ -29,7 +29,7 @@ def spread_virus(temp_graph):
 
 
 def count_safe_area(temp_graph):
-    return sum(row.count(0) for row in temp_graph)
+    return sum(row.colors(0) for row in temp_graph)
 
 
 for comb in combinations(cells, 3):
