@@ -1,34 +1,23 @@
 import sys
-from itertools import combinations
-
+from collections import defaultdict
 
 def main():
     input = sys.stdin.readline
+
     N, K = map(int, input().split())
-    A = list(map(int, input().split()))
+    arr = list(map(int, input().split()))
 
-    psum = [0] * N
-    psum[0] = A[0]
-    for i in range(1, N):
-        psum[i] = psum[i - 1] + A[i]
+    prefix_sum = 0
+    count = 0
+    counter = defaultdict(int)
+    counter[0] = 1  # 누적합이 K와 같은 경우를 위해 초기값 1로 설정
 
-    answer = 0
-    count = {}
-    for i in range(N):
-        target = psum[i] - K
-        print(f"target : {target}")
-        if target == 0:
-            answer += 1
-        if target in count:
-            answer += count[target]
-        if psum[i] not in count:
-            count[psum[i]] = 0
-        count[psum[i]] += 1
-        print(f"count : {count}")
-        print(f"answer : {answer}")
-        print("--------------------------------------")
+    for num in arr:
+        prefix_sum += num
+        count += counter[prefix_sum - K]
+        counter[prefix_sum] += 1
 
-    print(answer)
+    print(count)
 
 
 if __name__ == '__main__':
