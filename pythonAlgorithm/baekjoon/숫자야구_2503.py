@@ -1,33 +1,34 @@
 import sys
-from itertools import permutations, combinations
+from itertools import permutations
 
-if __name__ == '__main__':
-    input = sys.stdin.readline
-
-
-    def calculate(A, B):
+def main():
+    def check(question, target):
         strike = 0
         ball = 0
         for i in range(3):
-            if int(A[i]) == B[i]:
+            if question[i] == target[i]:
                 strike += 1
-                continue
-            if int(A[i]) in B:
+            elif question[i] in target:
                 ball += 1
+
         return strike, ball
 
+    input = sys.stdin.readline
     N = int(input())
-    q = []
-    for i in range(N):
-        q.append(input().split())
 
-    count = 0
-    for permutation in permutations(range(1, 10), 3):
-        is_good = True
-        for i in range(N):
-            strike, ball = calculate(q[i][0], permutation)
-            if strike != int(q[i][1]) or ball != int(q[i][2]):
-                is_good = False
-        if is_good:
-            count += 1
-    print(count)
+    permutation = list(permutations(range(1, 10), 3))
+
+    for i in range(N):
+        Q, S, B = map(int, input().split())
+        question = [int(i) for i in str(Q)]
+        tmp = []
+        for perm in permutation:
+            strike, ball = check(question, perm)
+            if strike == S and ball == B:
+                tmp.append(perm)
+        permutation = tmp
+
+    print(len(permutation))
+
+if __name__ == '__main__':
+    main()
