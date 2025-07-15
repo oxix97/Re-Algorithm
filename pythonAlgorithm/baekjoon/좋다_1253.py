@@ -1,27 +1,34 @@
 import sys
-from itertools import combinations
 
-input = sys.stdin.readline
-N = int(input())
-nums = list(map(int, input().split()))
-nums.sort()
-answer = 0
-for i in range(N):
-    left, right = 0, N - 1
-    target = nums[i]
+
+def find_good(good):
+    left = 0
+    right = N - 1
     while left < right:
-        snum = nums[left] + nums[right]
-        if snum == target:
-            if left == i:
+        snum = A[left] + A[right]
+        if snum == good:
+            if i == left:
                 left += 1
                 continue
-            if right == i:
+            if i == right:
                 right -= 1
                 continue
-            answer += 1
-            break
-        elif snum < target:
+            return 1
+        elif snum < good:
             left += 1
         else:
             right -= 1
+
+    return 0
+
+
+input = sys.stdin.readline
+N = int(input())
+A = list(map(int, input().split()))
+A.sort()
+answer = 0
+
+for i in range(N):
+    answer += find_good(A[i])
+
 print(answer)
