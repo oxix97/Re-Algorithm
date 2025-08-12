@@ -1,10 +1,11 @@
-package programmers;
+package programmers.kit.hash;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.function.Function;
+import java.util.stream.IntStream;
 
 import static java.util.stream.Collectors.*;
 
@@ -19,7 +20,6 @@ public class 의상 {
         for (String key : map.keySet()) {
             answer *= map.get(key) + 1;
         }
-
         return answer - 1;
     }
 

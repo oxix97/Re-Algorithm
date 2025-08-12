@@ -1,4 +1,4 @@
-package programmers;
+package programmers.kit.hash;
 
 import java.util.*;
 import java.util.function.Function;
