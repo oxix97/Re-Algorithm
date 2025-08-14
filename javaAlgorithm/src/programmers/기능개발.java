@@ -1,38 +1,39 @@
 package programmers;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 public class 기능개발 {
     public static int[] solution(int[] progresses, int[] speeds) {
-        Queue<Integer> q = new LinkedList<>();
+        Deque<Integer> q = new ArrayDeque<>();
 
-        for (int i = 0; i < speeds.length; i++) {
-            int day = (100 - progresses[i]) / speeds[i];
-            if ((100 - progresses[i]) % speeds[i] == 0)
-                q.add(day);
-            else q.add(day + 1);
-
-        }
-
-        List<Integer> list = new ArrayList<>();
-        int count = 1;
-        int v = q.poll();
-
-        while (!q.isEmpty()) {
-            int tmp = q.poll();
-            if (v >= tmp) {
-                count++;
-            } else {
-                list.add(count);
-                count = 1;
-                v = tmp;
+        for(int i=0;i<speeds.length;i++){
+            int other = 100 - progresses[i];
+            int cnt = other / speeds[i];
+            if(other % speeds[i] != 0){
+                cnt += 1;
             }
+            q.addLast(cnt);
         }
-        list.add(count);
-        return list.stream().mapToInt(it -> it).toArray();
+
+        List<Integer> answer = new ArrayList<>();
+        while (!q.isEmpty()){
+            int day = q.removeFirst();
+            int cnt = 1;
+            while (!q.isEmpty()){
+                if(q.peekFirst() <= day){
+                    q.removeFirst();
+                    cnt += 1;
+                    continue;
+                }
+                break;
+            }
+
+            answer.add(cnt);
+        }
+
+        return answer.stream()
+                .mapToInt(it->it)
+                .toArray();
     }
 
     public static void main(String[] args) {

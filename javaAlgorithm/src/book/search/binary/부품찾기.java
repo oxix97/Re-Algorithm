@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class 부품찾기 {
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -21,7 +22,8 @@ public class 부품찾기 {
     }
 
     private static void solution1() {
-        List<Integer> list = Arrays.stream(nArr).boxed().toList();
+        List<Integer> list = Arrays.stream(nArr).boxed()
+                        .collect(Collectors.toList());
         Arrays.stream(mArr)
                 .map(it -> Collections.binarySearch(list, it))
                 .forEach(it -> {
