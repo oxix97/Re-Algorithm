@@ -4,51 +4,30 @@ import java.util.*;
 
 public class 인사고과 {
     public int solution(int[][] scores) {
-        int N = scores.length;
+        int a = scores[0][0];
+        int b = scores[0][1];
 
-        List<Score> sc = new ArrayList<>();
-        for (int i = 0; i < N; i++) {
-            sc.add(new Score(i, scores[i][0], scores[i][1]));
-        }
-
-        Collections.sort(sc, (o1, o2) -> {
-            if (o1.a == o2.a) return o1.b - o2.b;
-            return o2.a - o1.a;
+        Arrays.sort(scores,(o1,o2)->{
+            if(o1[0] == o2[0])
+                return o1[1] - o2[1];
+            return o2[0]-o1[0];
         });
 
         int maxB = -1;
-        int sum = 0;
         int rank = 1;
-
-        for (Score s : sc) {
-            if (s.idx == 0) {
-                sum = s.total;
-            }
-
-            if (s.b < maxB) {
-                if (s.idx == 0)
+        for(int[] s : scores){
+            if(s[1] < maxB){
+                if(a == s[0] && b == s[1])
                     return -1;
                 continue;
-            } else {
-                maxB = s.b;
             }
 
-            if (s.total > sum) {
-                rank++;
-            }
+            if(s[0] + s[1] > a + b)
+                rank += 1;
+
+            maxB = Math.max(maxB,s[1]);
         }
 
         return rank;
-    }
-
-    class Score {
-        int idx, a, b, total;
-
-        public Score(int idx, int a, int b) {
-            this.idx = idx;
-            this.a = a;
-            this.b = b;
-            this.total = a + b;
-        }
     }
 }
