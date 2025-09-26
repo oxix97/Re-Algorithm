@@ -1,6 +1,7 @@
 package programmers.greedy;
 
 import java.util.ArrayDeque;
+import java.util.Deque;
 
 public class 택배상자 {
     public int solution(int[] order) {
