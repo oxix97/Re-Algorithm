@@ -12,6 +12,8 @@
     - [Palindrome](#-palindrome-dp--two-pointers)
 2. [그래프 (Graph)](#-graph)
     - [Union-Find](#-union-find)
+3. 수학
+    - 정수론
 ---
 
 ## 1. DP (Dynamic Programming)
@@ -36,3 +38,13 @@
 | 번호 | 제목 | 난이도 | 풀이 코드 | 비고 (핵심 로직) |
 | :---: | :---: | :---: | :---: | :--- |
 | 20040 | [사이클 게임](https://www.acmicpc.net/problem/20040) | <img src="https://static.solved.ac/tier_small/12.svg" height="14px"> Gold IV | [Java](https://github.com/oxix97/Re-Algorithm/tree/main/javaAlgorithm/src/baekjoon/graph/BOJ_20040.java) | 사이클 발생 시점 찾기 (Union-Find) |
+
+
+---
+## 3. Math
+
+### 3-1. Prime Number
+
+|  번호   |                        제목                         | 난이도 |                                                  풀이 코드                                                  | 비고 (핵심 로직)    |
+|:-----:|:-------------------------------------------------:| :---: |:-------------------------------------------------------------------------------------------------------:|:--------------|
+| 27172 | [수 나누기 게임](https://www.acmicpc.net/problem/27172) | <img src="https://static.solved.ac/tier_small/12.svg" height="14px"> Gold IV | [Java](https://github.com/oxix97/Re-Algorithm/tree/main/javaAlgorithm/src/baekjoon/math/BOJ_27172.java) | 정수론           |
