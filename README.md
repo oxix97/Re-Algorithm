@@ -45,6 +45,8 @@
 
 ### 3-1. Prime Number
 
-|  번호   |                        제목                         | 난이도 |                                                  풀이 코드                                                  | 비고 (핵심 로직)    |
-|:-----:|:-------------------------------------------------:| :---: |:-------------------------------------------------------------------------------------------------------:|:--------------|
-| 27172 | [수 나누기 게임](https://www.acmicpc.net/problem/27172) | <img src="https://static.solved.ac/tier_small/12.svg" height="14px"> Gold IV | [Java](https://github.com/oxix97/Re-Algorithm/tree/main/javaAlgorithm/src/baekjoon/math/BOJ_27172.java) | 정수론           |
+|  번호   |                        제목                         |                                      난이도                                      |                                                  풀이 코드                                                  | 비고 (핵심 로직) |
+|:-----:|:-------------------------------------------------:|:-----------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------:|:-----------|
+| 1644  |  [소수의 연속합](https://www.acmicpc.net/problem/1644)  | <img src="https://static.solved.ac/tier_small/13.svg" height="14px"> Gold III | [Java](https://github.com/oxix97/Re-Algorithm/tree/main/javaAlgorithm/src/baekjoon/math/BOJ_1644.java)  | 정수론, 투포인터  |
+| 27172 | [수 나누기 게임](https://www.acmicpc.net/problem/27172) | <img src="https://static.solved.ac/tier_small/12.svg" height="14px"> Gold IV  | [Java](https://github.com/oxix97/Re-Algorithm/tree/main/javaAlgorithm/src/baekjoon/math/BOJ_27172.java) | 정수론        |
+
