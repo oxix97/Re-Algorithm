@@ -14,6 +14,8 @@
     - [Union-Find](#-union-find)
 3. 수학
     - 정수론
+4. 탐색
+   - 이진 탐색
 ---
 
 ## 1. DP (Dynamic Programming)
@@ -50,3 +52,12 @@
 | 1644  |  [소수의 연속합](https://www.acmicpc.net/problem/1644)  | <img src="https://static.solved.ac/tier_small/13.svg" height="14px"> Gold III | [Java](https://github.com/oxix97/Re-Algorithm/tree/main/javaAlgorithm/src/baekjoon/math/BOJ_1644.java)  | 정수론, 투포인터  |
 | 27172 | [수 나누기 게임](https://www.acmicpc.net/problem/27172) | <img src="https://static.solved.ac/tier_small/12.svg" height="14px"> Gold IV  | [Java](https://github.com/oxix97/Re-Algorithm/tree/main/javaAlgorithm/src/baekjoon/math/BOJ_27172.java) | 정수론        |
 
+---
+
+## 4. Search
+
+### 4-1. Binary Search
+
+|  번호  |                        제목                        |                                      난이도                                      |                                                풀이 코드                                                 | 비고 (핵심 로직) |
+|:----:|:------------------------------------------------:|:-----------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------:|:-----------|
+| 2143 | [두 배열의 합](https://www.acmicpc.net/problem/2143) | <img src="https://static.solved.ac/tier_small/13.svg" height="14px"> Gold III | [Java](https://github.com/oxix97/Re-Algorithm/tree/main/javaAlgorithm/src/baekjoon/search/BOJ_2143.java) | 누적합, 이진 탐색 |
