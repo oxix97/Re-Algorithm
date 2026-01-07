@@ -26,10 +26,11 @@
 
 ### 1-1. Palindrome (DP / Two Pointers)
 
-| 번호 | 제목 | 난이도 | 풀이 코드 | 비고 (핵심 로직) |
-| :---: | :---: | :---: | :---: | :--- |
-| 10942 | [팰린드롬?](https://www.acmicpc.net/problem/10942) | <img src="https://static.solved.ac/tier_small/12.svg" height="14px"> Gold IV | [Java](https://github.com/oxix97/Re-Algorithm/tree/main/javaAlgorithm/src/baekjoon/dp/BOJ_10942.java) | DP (S~E가 팰린드롬인지 기록) |
-| 17609 | [회문](https://www.acmicpc.net/problem/17609) | <img src="https://static.solved.ac/tier_small/11.svg" height="14px"> Gold V | [Java](https://github.com/oxix97/Re-Algorithm/tree/main/javaAlgorithm/src/baekjoon/dp/BOJ_17609.java) | 투 포인터, 유사회문 판별 |
+|  번호   |                               제목                               |                                      난이도                                      |                                                 풀이 코드                                                 | 비고 (핵심 로직)          |
+|:-----:|:--------------------------------------------------------------:|:-----------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------:|:--------------------|
+| 2342  | [Dance Dance Revolution](https://www.acmicpc.net/problem/2342) | <img src="https://static.solved.ac/tier_small/13.svg" height="14px"> Gold III | [Java](https://github.com/oxix97/Re-Algorithm/tree/main/javaAlgorithm/src/baekjoon/dp/BOJ_2342.java)  | DP (3차원 배열)         |
+| 10942 |         [팰린드롬?](https://www.acmicpc.net/problem/10942)         | <img src="https://static.solved.ac/tier_small/12.svg" height="14px"> Gold IV  | [Java](https://github.com/oxix97/Re-Algorithm/tree/main/javaAlgorithm/src/baekjoon/dp/BOJ_10942.java) | DP (S~E가 팰린드롬인지 기록) |
+| 17609 |          [회문](https://www.acmicpc.net/problem/17609)           |  <img src="https://static.solved.ac/tier_small/11.svg" height="14px"> Gold V  | [Java](https://github.com/oxix97/Re-Algorithm/tree/main/javaAlgorithm/src/baekjoon/dp/BOJ_17609.java) | 투 포인터, 유사회문 판별      |
 
 ---
 
