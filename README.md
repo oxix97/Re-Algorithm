@@ -47,12 +47,18 @@
 ---
 ## 3. Math
 
+| 번호 | 제목 | 난이도 | 풀이 코드 | 비고 (핵심 로직) |
+| :---: | :---: | :---: | :---: | :--- |
+| 11444 | [피보나치 수 6 ](https://www.acmicpc.net/problem/11444) | <img src="https://static.solved.ac/tier_small/14.svg" height="14px"> Gold II  | [Java](https://github.com/oxix97/Re-Algorithm/tree/main/javaAlgorithm/src/baekjoon/math/BOJ_11444.java) | 분할정복을 이용한 거듭제곱, 선형대수학        |
+
 ### 3-1. Prime Number
 
 |  번호   |                        제목                         |                                      난이도                                      |                                                  풀이 코드                                                  | 비고 (핵심 로직) |
 |:-----:|:-------------------------------------------------:|:-----------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------:|:-----------|
 | 1644  |  [소수의 연속합](https://www.acmicpc.net/problem/1644)  | <img src="https://static.solved.ac/tier_small/13.svg" height="14px"> Gold III | [Java](https://github.com/oxix97/Re-Algorithm/tree/main/javaAlgorithm/src/baekjoon/math/BOJ_1644.java)  | 정수론, 투포인터  |
 | 27172 | [수 나누기 게임](https://www.acmicpc.net/problem/27172) | <img src="https://static.solved.ac/tier_small/12.svg" height="14px"> Gold IV  | [Java](https://github.com/oxix97/Re-Algorithm/tree/main/javaAlgorithm/src/baekjoon/math/BOJ_27172.java) | 정수론        |
+
+
 
 ---
 
