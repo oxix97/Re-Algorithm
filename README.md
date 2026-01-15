@@ -3,7 +3,7 @@
 백준 온라인 저지(BOJ) 알고리즘 문제 풀이 기록입니다.
 문제 유형별로 분류하여 정리하고 있습니다.
 
-[![Solved.ac Profile](http://mazassumn.aaaaa.com/api/v2/generate_badge?boj=oxix97)](https://solved.ac/oxix97)
+[![Solved.ac Profile](http://mazassumn.aaaaa.com/api/v2/generate_badge?boj=ieejo716)](https://solved.ac/ieejo716)
 
 ---
 
@@ -23,11 +23,12 @@
 
 ## 1. DP (Dynamic Programming)
 
-|  번호   |                        제목                         |                                      난이도                                      |                                                 풀이 코드                                                 | 비고 (핵심 로직)         |
-|:-----:|:-------------------------------------------------:|:-----------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------:|:-------------------|
-| 11049 | [행렬 곱셈 순서](https://www.acmicpc.net/problem/11049) | <img src="https://static.solved.ac/tier_small/13.svg" height="14px"> Gold III |   [Java](https://github.com/oxix97/Re-Algorithm/tree/main/javaAlgorithm/src/baekjoon/dp/BOJ_11049.java)    | 행렬, DP             |
-| 11066 |  [파일 합치기](https://www.acmicpc.net/problem/11066)  | <img src="https://static.solved.ac/tier_small/13.svg" height="14px"> Gold III | [Java](https://github.com/oxix97/Re-Algorithm/tree/main/javaAlgorithm/src/baekjoon/dp/BOJ_11066.java) | 누적합, DP            |
-| 17404 | [RGB거리 2](https://www.acmicpc.net/problem/17404)  | <img src="https://static.solved.ac/tier_small/12.svg" height="14px"> Gold IV  | [Java](https://github.com/oxix97/Re-Algorithm/tree/main/javaAlgorithm/src/baekjoon/dp/BOJ_17404.java) | 원형 큐 개념, 첫 집 색깔 고정 |
+|  번호   |                        제목                         |                                      난이도                                      |                                                 풀이 코드                                                 | 비고 (핵심 로직)           |
+|:-----:|:-------------------------------------------------:|:-----------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------:|:---------------------|
+| 9251  |    [LCS](https://www.acmicpc.net/problem/9251)    |  <img src="https://static.solved.ac/tier_small/11.svg" height="14px"> Gold V  | [Java](https://github.com/oxix97/Re-Algorithm/tree/main/javaAlgorithm/src/baekjoon/dp/BOJ_9251.java)  | 최장 공통 부분 수열(LCS), DP |
+| 11049 | [행렬 곱셈 순서](https://www.acmicpc.net/problem/11049) | <img src="https://static.solved.ac/tier_small/13.svg" height="14px"> Gold III | [Java](https://github.com/oxix97/Re-Algorithm/tree/main/javaAlgorithm/src/baekjoon/dp/BOJ_11049.java) | 행렬, DP               |
+| 11066 |  [파일 합치기](https://www.acmicpc.net/problem/11066)  | <img src="https://static.solved.ac/tier_small/13.svg" height="14px"> Gold III | [Java](https://github.com/oxix97/Re-Algorithm/tree/main/javaAlgorithm/src/baekjoon/dp/BOJ_11066.java) | 누적합, DP              |
+| 17404 | [RGB거리 2](https://www.acmicpc.net/problem/17404)  | <img src="https://static.solved.ac/tier_small/12.svg" height="14px"> Gold IV  | [Java](https://github.com/oxix97/Re-Algorithm/tree/main/javaAlgorithm/src/baekjoon/dp/BOJ_17404.java) | 원형 큐 개념, 첫 집 색깔 고정   |
 
 ### 1-1. Palindrome (DP / Two Pointers)
 

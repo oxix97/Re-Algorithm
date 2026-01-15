@@ -8,41 +8,49 @@ import java.util.StringTokenizer;
 public class BOJ_10942 {
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
-    static int N, M;
-    static int[] arr;
-    static boolean[][] dp;
 
     public static void main(String[] args) throws IOException {
-        N = Integer.parseInt(br.readLine());
-        arr = new int[N];
-        st = new StringTokenizer(br.readLine());
-        for (int i = 0; i < N; i++)
-            arr[i] = Integer.parseInt(st.nextToken());
+        int N = Integer.parseInt(br.readLine());
+        int[] arr = new int[N + 1];
 
-        dp = new boolean[N][N];
-        for (int len = 1; len <= N; len++) {
-            for (int i = 0; i <= N - len; i++) {
+        st = new StringTokenizer(br.readLine());
+        for (int i = 1; i <= N; i++) {
+            arr[i] = Integer.parseInt(st.nextToken());
+        }
+
+        boolean[][] isPalindrome = new boolean[N + 1][N + 1];
+
+        for (int i = 1; i <= N; i++) {
+            isPalindrome[i][i] = true;
+        }
+
+        for (int i = 1; i < N; i++) {
+            if (arr[i] == arr[i + 1]) {
+                isPalindrome[i][i + 1] = true;
+            }
+        }
+
+        for (int len = 3; len <= N; len++) {
+            for (int i = 1; i <= N - len + 1; i++) {
                 int j = i + len - 1;
 
-                if (arr[i] == arr[j]) {
-                    if (len <= 2 || dp[i + 1][j - 1]) {
-                        dp[i][j] = true;
-                    }
+                if (arr[i] == arr[j] && isPalindrome[i + 1][j - 1]) {
+                    isPalindrome[i][j] = true;
                 }
             }
         }
 
-        M = Integer.parseInt(br.readLine());
+        int M = Integer.parseInt(br.readLine());
+        var sb = new StringBuilder();
 
-        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < M; i++) {
             st = new StringTokenizer(br.readLine());
-            int start = Integer.parseInt(st.nextToken()) - 1;
-            int end = Integer.parseInt(st.nextToken()) - 1;
+            int s = Integer.parseInt(st.nextToken());
+            int e = Integer.parseInt(st.nextToken());
 
-            int result = dp[start][end] ? 1 : 0;
-            sb.append(result).append('\n');
+            sb.append(isPalindrome[s][e] ? 1 : 0).append('\n');
         }
+
         System.out.println(sb);
     }
 }
