@@ -6,31 +6,33 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class BOJ_2294 {
+public class BOJ_2293 {
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
     static int N, K;
-    static int[] coin, dp;
-    static final int INF = 100_001;
+    static int[] coin;
+    static int[] dp;
 
     public static void main(String[] args) throws IOException {
         st = new StringTokenizer(br.readLine());
         N = Integer.parseInt(st.nextToken());
         K = Integer.parseInt(st.nextToken());
-
         coin = new int[N];
-        for (int i = 0; i < N; i++)
-            coin[i] = Integer.parseInt(br.readLine());
-
         dp = new int[K + 1];
-        Arrays.fill(dp, INF);
-        dp[0] = 0;
+        Arrays.sort(coin);
 
-        for (int co : coin) {
-            for (int k = co; k <= K; k++) {
-                dp[k] = Math.min(dp[k], dp[k - co] + 1);
+        for (int i = 0; i < N; i++) {
+            coin[i] = Integer.parseInt(br.readLine());
+        }
+
+        dp[0] = 1;
+
+        for (int c : coin) {
+            for (int k = c; k <= K; k++) {
+                dp[k] += dp[k - c];
             }
         }
-        System.out.println(dp[K] == INF ? -1 : dp[K]);
+
+        System.out.println(dp[K]);
     }
 }
