@@ -70,9 +70,10 @@
 
 ### 2-1. DFS / BFS
 
-| 번호 | 제목 | 난이도 | 핵심 로직 | 풀이 코드 | velog                                                                                                         |
-| --- | --- | --- | --- | --- |---------------------------------------------------------------------------------------------------------------|
-| 9466 | [텀 프로젝트](https://www.acmicpc.net/problem/9466) | <img src="https://static.solved.ac/tier_small/13.svg" height="14px"> Gold III | 사이클 발생 시점 찾기 (DFS) | [Java](https://github.com/oxix97/Re-Algorithm/tree/main/javaAlgorithm/src/baekjoon/graph/BOJ_9466.java) | [velog](https://velog.io/@ieejo716/%EB%B0%B1%EC%A4%80-BOJ9466-%ED%85%80-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8) |
+| 번호    | 제목                                                 | 난이도 | 핵심 로직 | 풀이 코드                                                                                                    | velog                                                                                                         |
+|-------|----------------------------------------------------| --- | --- |----------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
+| 9466  | [텀 프로젝트](https://www.acmicpc.net/problem/9466)     | <img src="https://static.solved.ac/tier_small/13.svg" height="14px"> Gold III | 사이클 발생 시점 찾기 (DFS) | [Java](https://github.com/oxix97/Re-Algorithm/tree/main/javaAlgorithm/src/baekjoon/graph/BOJ_9466.java)  | [velog](https://velog.io/@ieejo716/%EB%B0%B1%EC%A4%80-BOJ9466-%ED%85%80-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8) |
+| 16724 | [피리 부는 사나이](https://www.acmicpc.net/problem/16724) | <img src="https://static.solved.ac/tier_small/13.svg" height="14px"> Gold III | 사이클 발생 시점 찾기 (DFS) | [Java](https://github.com/oxix97/Re-Algorithm/tree/main/javaAlgorithm/src/baekjoon/graph/BOJ_16724.java) | [velog](https://velog.io/@ieejo716/%EB%B0%B1%EC%A4%80-BOJ16724-%ED%94%BC%EB%A6%AC-%EB%B6%80%EB%8A%94-%EC%82%AC%EB%82%98%EC%9D%B4) |
 
 ### 2-2. Union-Find
 
